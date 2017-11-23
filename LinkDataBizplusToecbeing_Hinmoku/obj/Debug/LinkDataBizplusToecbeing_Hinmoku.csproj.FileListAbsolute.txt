@@ -1,0 +1,14 @@
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\Message\messages.xml
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\AppCommon.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\App.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\LinkDataBizplusToecbeing_Hinmoku.exe.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\LinkDataBizplusToecbeing_Hinmoku.exe
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\LinkDataBizplusToecbeing_Hinmoku.pdb
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\B2BSiteRenkei.Common.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\log4net.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\CsvHelper.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\B2BSiteRenkei.Common.pdb
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\bin\Debug\CsvHelper.xml
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\obj\Debug\LinkDataBizplusToecbeing_Hinmoku.csprojResolveAssemblyReference.cache
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\obj\Debug\LinkDataBizplusToecbeing_Hinmoku.exe
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_Hinmoku\obj\Debug\LinkDataBizplusToecbeing_Hinmoku.pdb

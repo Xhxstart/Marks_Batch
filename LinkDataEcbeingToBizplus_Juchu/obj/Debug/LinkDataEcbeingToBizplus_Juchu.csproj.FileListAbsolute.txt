@@ -1,0 +1,14 @@
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\Message\messages.xml
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\AppCommon.config
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\app.config
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\LinkDataEcbeingToBizplus_Juchu.exe.config
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\LinkDataEcbeingToBizplus_Juchu.exe
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\LinkDataEcbeingToBizplus_Juchu.pdb
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\B2BSiteRenkei.Common.dll
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\log4net.dll
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\CsvHelper.dll
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\B2BSiteRenkei.Common.pdb
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\bin\Debug\CsvHelper.xml
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\obj\Debug\LinkDataEcbeingToBizplus_Juchu.csprojResolveAssemblyReference.cache
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\obj\Debug\LinkDataEcbeingToBizplus_Juchu.exe
+C:\git\Marks_Batch\LinkDataEcbeingToBizplus_Juchu\obj\Debug\LinkDataEcbeingToBizplus_Juchu.pdb

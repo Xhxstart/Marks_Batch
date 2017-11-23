@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<MessageDef id="">
+  <Message id="BB0001I">■■■■■ {0}連携開始 ■■■■■</Message>
+  <Message id="BB0002I">■■■■■ {0}連携終了 ■■■■■</Message>
+  <Message id="BB0003I">{0}件数：{1}件</Message>
+  <Message id="BB0004E">快作データベースの接続に失敗しました。</Message>
+  <Message id="BB0005E">処理できない型です。</Message>
+  <Message id="BB0006E">データ取得できません。</Message>
+  <Message id="BB0007E">SQL実行できません。</Message>
+  <Message id="BB0008E">DBをクローズできません。</Message>
+  <Message id="BB0009I">SQL文：</Message>
+  <Message id="BB0010I">SQL {0}番目パラメータ：key={1}、value={2}</Message>
+  <Message id="BB0011E">{0}処理に失敗しました。</Message>
+  <Message id="BB0012E">{0}フォルダ（{1}）が見つかりません。</Message>
+  <Message id="BB0013E">{0}ファイルが見つかりません。</Message>
+  <Message id="BB0014E">設定ファイルの読み込みに失敗しました。</Message>
+  <Message id="BB0015E">設定ファイルから設定値（{0}）の取得に失敗しました。</Message>
+  <Message id="BB0016E">CSVファイル（{0}）の移動に失敗しました。</Message>
+  <Message id="BB0017E">{0}のCSV出力に失敗しました。</Message>
+  <Message id="BB0018E">ファイル（{0}）のダウンロードに失敗しました。</Message>
+  <Message id="BB0019E">ファイル（{0}）のアップロードに失敗しました。</Message>
+  <Message id="BB0020E">ファイル（{0}）の削除に失敗しました。</Message>
+  <Message id="BB0021E">{0}実行失敗しました。実行ファイル{1}が見つかりません。</Message>
+  <Message id="BB0022E">{0}ファイル形式が不正です(項目数)。</Message>
+  <Message id="BB0023E">{0}のCSVファイル取込に失敗しました。</Message>
+  <Message id="BB0024E">CSVファイル取込に失敗しました。CSVエラーファイル（{0}）を確認してください。</Message>
+  <Message id="BB0025E">出荷完了連携バッチの引数指定不正です。日時を入力してください。</Message>
+  <Message id="BB0026I">{0}、しばらくお待ちください...</Message>
+  <Message id="BB0027I">{0}を実行しますか？</Message>
+  <Message id="BB0028E">ログオン失敗: ユーザー名を認識できないか、またはパスワードが間違っています。</Message>
+  <Message id="BB0029E">ネットワーク パス（{0}）が見つかりません。</Message>
+  <Message id="BB0030E">PsTools実行ファイル（{0}）が見つかりません。</Message>
+</MessageDef>

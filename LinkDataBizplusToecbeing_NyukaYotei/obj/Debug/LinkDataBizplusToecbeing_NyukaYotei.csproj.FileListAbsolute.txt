@@ -1,0 +1,14 @@
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\Message\messages.xml
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\AppCommon.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\App.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\LinkDataBizplusToecbeing_NyukaYotei.exe.config
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\LinkDataBizplusToecbeing_NyukaYotei.exe
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\LinkDataBizplusToecbeing_NyukaYotei.pdb
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\B2BSiteRenkei.Common.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\log4net.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\CsvHelper.dll
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\B2BSiteRenkei.Common.pdb
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\bin\Debug\CsvHelper.xml
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\obj\Debug\LinkDataBizplusToecbeing_NyukaYotei.csprojResolveAssemblyReference.cache
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\obj\Debug\LinkDataBizplusToecbeing_NyukaYotei.exe
+C:\git\Marks_Batch\LinkDataBizplusToecbeing_NyukaYotei\obj\Debug\LinkDataBizplusToecbeing_NyukaYotei.pdb

@@ -1,0 +1,9 @@
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\Message\messages.xml
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\AppCommon.config
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\B2BSiteRenkei.Common.dll
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\B2BSiteRenkei.Common.pdb
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\CsvHelper.dll
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\log4net.dll
+C:\git\Marks_Batch\B2BSiteRenkei.Common\bin\Debug\CsvHelper.xml
+C:\git\Marks_Batch\B2BSiteRenkei.Common\obj\Debug\B2BSiteRenkei.Common.dll
+C:\git\Marks_Batch\B2BSiteRenkei.Common\obj\Debug\B2BSiteRenkei.Common.pdb

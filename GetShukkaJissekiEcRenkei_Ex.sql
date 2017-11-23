@@ -1,0 +1,109 @@
+IF exists(select * from sysobjects where name='GetShukkaJissekiEcRenkei_Ex')
+	DROP PROCEDURE dbo.GetShukkaJissekiEcRenkei_Ex
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- CSV出力用出荷完了一覧取得
+-- =============================================
+CREATE PROCEDURE [dbo].GetShukkaJissekiEcRenkei_Ex
+	/* 引数宣言 */
+	 @KAISHA_CD		AS NVARCHAR(15),
+	 @URIAGE_INS_DATE	AS DATETIME
+AS
+BEGIN
+SET NOCOUNT ON
+
+	DECLARE @B2B_TORIHIKISAKI_SNM NVARCHAR(40)				--取引先略称	
+	DECLARE @B2B_INS_PGM_CD NVARCHAR(30)					--登録プログラムコード
+
+	--取引先略称
+    SELECT @B2B_TORIHIKISAKI_SNM = VALUE FROM BC_MST_SYSTEM
+    WHERE KAISHA_CD = @KAISHA_CD
+    AND BUNRUI_NM = 'CO'
+    AND VALUE_NM = 'B2B_TORIHIKISAKI_SNM' 
+
+	--登録プログラムコード
+    SELECT @B2B_INS_PGM_CD = VALUE FROM BC_MST_SYSTEM
+    WHERE KAISHA_CD = @KAISHA_CD
+    AND BUNRUI_NM = 'HK'
+    AND VALUE_NM = 'B2B_INS_PGM_CD' 
+
+
+	SELECT	
+		JHEX.TOKUISAKI_DENPYO_NO AS 得意先伝票番号, 
+		JUCD.BIKO AS 行番号,
+		HIMK.HINMOKU_CD AS 品目コード,
+		FLOOR(URID.SURYO) AS 出荷実績数,
+		CONVERT(NVARCHAR,JUCD.NOHIN_YOTEI_DATE,111) AS 納品日,
+		CONVERT(NVARCHAR,URIH.URIAGE_DATE,111) AS 売上日
+	FROM
+		HK_TBL_URIAGE_DTL	URID
+	LEFT OUTER JOIN HK_TBL_URIAGE_HDR URIH ON		--売上ヘッダ
+		URIH.KAISHA_CD = URID.KAISHA_CD
+		AND
+		URIH.URIAGE_NO = URID.URIAGE_NO
+	LEFT OUTER JOIN HK_TBL_JUCHU_DTL JUCD ON		--受注明細
+		JUCD.KAISHA_CD = URID.KAISHA_CD
+		AND
+		JUCD.JUCHU_NO = URID.JUCHU_NO
+		AND
+		JUCD.JUCHU_ENO = URID.JUCHU_ENO
+	LEFT OUTER JOIN HK_TBL_JUCHU_HDR_EX JHEX ON		--受注ヘッダEX
+		JUCD.KAISHA_CD = JHEX.KAISHA_CD
+		AND
+		JUCD.JUCHU_NO = JHEX.JUCHU_NO	
+	LEFT JOIN BC_MST_TORIHIKISAKI TOKUISAKI	ON	--得意先
+		URIH.KAISHA_CD = TOKUISAKI.KAISHA_CD
+		AND URIH.TOKUISAKI_CD = TOKUISAKI.TORIHIKISAKI_CD
+		AND TOKUISAKI.DEL_FLG = 0			--削除フラグ  
+		AND TOKUISAKI.MUKOU_FLG = 0			--無効フラグ
+	LEFT JOIN BC_MST_HINMOKU_KANRI AS BMHK ON
+                --品目管理マスタ．会社コード =受注伝票明細．会社コード
+        BMHK.KAISHA_CD = URID.KAISHA_CD
+                --品目管理マスタ．品目SEQ =受注伝票明細．品目SEQ
+        AND BMHK.HINMOKU_SEQ = URID.HINMOKU_SEQ
+			    --削除フラグ = 0
+        AND BMHK.DEL_FLG = 0 
+				--品目マスタ
+	LEFT JOIN BC_MST_HINMOKU AS HIMK ON
+                --品目マスタ．会社コード =品目管理マスタ．会社コード
+        HIMK.KAISHA_CD = BMHK.KAISHA_CD
+                --品目マスタ．品目コード =品目管理マスタ．品目コード
+        AND HIMK.HINMOKU_CD = BMHK.HINMOKU_CD
+				--無効フラグ
+		AND HIMK.MUKOU_FLG = 0
+			    --削除フラグ = 0
+        AND HIMK.DEL_FLG = 0 
+				--品目マスタ拡張
+	LEFT JOIN BC_MST_HINMOKU_EX AS HIMKEX ON
+                --品目マスタ拡張．会社コード =品目マスタ．会社コード
+        HIMKEX.KAISHA_CD = HIMK.KAISHA_CD
+                --品目マスタ拡張．品目コード =品目マスタ．品目コード
+       AND HIMKEX.HINMOKU_CD = HIMK.HINMOKU_CD
+               
+	WHERE 
+		URID.DEL_FLG = 0 
+		AND 
+		TOKUISAKI.TORIHIKISAKI_SNM LIKE '%' + @B2B_TORIHIKISAKI_SNM + '%'
+		AND
+		URID.URIAGE_DTL_REG_FLG = 0
+		AND
+		HIMK.HINMOKU_CD <> 'DELI'
+		AND
+		HIMK.HINMOKU_CD <> 'COUPON'		
+		AND
+		CONVERT(NVARCHAR,URID.INS_TM,111) = CONVERT(NVARCHAR,@URIAGE_INS_DATE,111)		
+		AND
+		JUCD.INS_PGM_CD = @B2B_INS_PGM_CD		
+
+	ORDER BY 
+		JHEX.TOKUISAKI_DENPYO_NO,
+		JUCD.BIKO
+
+END
